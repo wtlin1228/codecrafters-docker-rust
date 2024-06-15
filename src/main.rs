@@ -27,7 +27,7 @@ fn main() -> anyhow::Result<()> {
         copy(&mut process_stderr, &mut stderr)
             .context("pipe process's stderr into parent's stderr")?;
     } else {
-        std::process::exit(1);
+        std::process::exit(output.status.code().unwrap_or(1));
     }
 
     Ok(())
