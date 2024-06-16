@@ -52,3 +52,12 @@ mydocker run alpine:latest /usr/local/bin/docker-explorer echo hey
 
 This command compiles your Rust project, so it might be slow the first time you
 run it. Subsequent runs will be fast.
+
+# Resource
+
+- [Container Runtime in Rust — Part 0](https://itnext.io/container-runtime-in-rust-part-0-7af709415cda)
+- [Container Runtime in Rust — Part I](https://itnext.io/container-runtime-in-rust-part-i-7bd9a434c50a)
+- [Container Runtime in Rust — Part II](https://itnext.io/container-runtime-in-rust-part-ii-9c88e99d8cbc)
+- [PURA - Lightweight & OCI-compliant container runtime](https://github.com/penumbra23/pura)
+- [youki: A container runtime in Rust](https://github.com/containers/youki)
+- [Container security fundamentals](https://www.youtube.com/playlist?list=PLdh-RwQzDsaNWBex2I09OFLCph7l_KnQE)

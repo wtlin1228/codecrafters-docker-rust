@@ -26,6 +26,12 @@ fn main() -> anyhow::Result<()> {
     // chroot jail
     std::os::unix::fs::chroot(temp_dir.path()).context("chroot into temporary directory")?;
 
+    // process isolation
+    #[cfg(target_os = "linux")]
+    unsafe {
+        libc::unshare(libc::CLONE_NEWPID)
+    };
+
     let status = std::process::Command::new(command)
         .args(command_args)
         .stdout(Stdio::inherit())
